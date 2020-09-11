@@ -1,0 +1,197 @@
+// Place all the styles related to the Organizers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    background-color: rgb(216, 233, 251);
+    .links {
+        background-color: white;
+        margin-right: 10px;
+        border-radius: 10px;
+        float: right;
+        display: inline-block;
+        width: 30%;
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            text-decoration-line: underline;
+        }
+        h3 {
+            text-align: center;
+            font-size: 25px;
+            text-decoration-line: underline;
+        }
+        .emails {   
+            @extend .flex-container;
+        }
+        .brightspace {
+            @extend .flex-container;
+        }
+        .uvic-home {
+            @extend .flex-container;
+        }
+    }
+    h1 {
+        display: block;
+        text-align: center;
+        font-size: 35px;
+        text-decoration-line: underline;
+    }
+    .other-stuff {
+        background-color: white;
+        border-radius: 10px;
+        width: 65%;
+        padding: 10px;
+        margin-left: 10px;
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            text-decoration-line: underline;
+        }
+    }
+    .other-stuff {
+        h3 {
+            font-size: 25px;
+            text-decoration-line: underline;
+        }
+        .homework-form {
+            border-bottom: rgb(131, 169, 212) solid .5px;
+            padding-bottom: 5px;
+            display: grid;
+            grid-template-columns: 100px 600px;
+            .grid-item {
+                padding: 5px;
+                textarea {
+                    outline: none;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 15px;
+                    font-weight: 700;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: rgb(216, 233, 251);
+                    padding: 10px;
+                    resize: none;
+                    width: 100%;
+                    height: 100px;
+                }
+            }
+            .button {
+                margin-top: 10px;
+                input {
+                    border: none;
+                    border-radius: 10px;
+                    background-color: rgb(216, 233, 251);
+                    height: 50px;
+                    width: 125px;
+                    transition: background-color .5s;
+                    font-size: 15px;
+
+                }
+                input:hover {
+                    background-color: rgb(131, 169, 212);
+                }
+            }
+
+        }
+
+        .homework {
+            display: flex;
+            flex-direction: column;
+            .flex-item { 
+                padding: 5px 5px 0 5px;
+                border: rgb(131, 169, 212) solid 1px;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                header {
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    border-bottom: rgb(240, 81, 81) solid 1px;
+                    padding: 2px;
+                    .subject {
+                        width: 5%;
+                    }
+                    .date {
+                        width: 10%;
+                    }
+                    .reminder {
+                        width: 85%;
+                        text-align: right;
+                    }
+                }
+                .content {
+                    margin-left: 10px;
+                    margin-bottom: 10px;
+                    width: 75%;
+                    padding: 5px;
+                    border: rgb(187, 187, 187) solid .25px;
+                    border-radius: 5px;
+                    font-size: 20px;
+                }
+                .edit {
+                    float: right;
+                    text-decoration-line: none;
+                }
+                footer {
+                    display: flex;
+                    flex-direction: row;
+                    .done {
+                        flex: 1;
+                        margin-bottom: 10px;
+                        button {
+                            font-size: 12px;
+                            background-color: rgb(240, 81, 81);
+                            border-radius: 5px;
+                            width: 25%;
+                            padding: 5px;
+                            height: 40px;
+                            font-weight: 800;
+                            text-align:center;
+                        }
+                        button:hover {
+                            background-color: rgb(202, 72, 72);
+                        }
+                    }
+                    .edit {
+                        flex: 1;
+                        text-align: right;
+                        a {
+                            vertical-align: bottom;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.flex-item {
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    button {
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(216, 233, 251);
+        height: 60px;
+        font-size: 20px;
+        width: 100%;
+        transition: background-color .5s;
+    }
+    button:hover {
+        background-color: rgb(131, 169, 212);
+    }
+}
+
+.flex-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
