@@ -30,7 +30,7 @@
                 <div class="flex-item">
                     <header>
                         <div class="item subject"><%= homework.subject %></div>
-                        <% if homework.content != "" %>  
+                        <% if homework.due_date != nil %>  
                             <div class="item date"><%= homework.due_date %></div>
                             <div class="reminder">you have <%= (homework.due_date.yday - Date.today.yday)%> days to complete this task</div>
                         <% else %>

@@ -3,6 +3,6 @@ class OrganizersController < ApplicationController
   def home
     @homework = Homework.new
     @homework_subject = ["MATH", "CSC", "HSTR", "ART", "ATWP"]
-    @homeworks = Homework.all.order("created_at DESC")
+    @homeworks = Homework.all.order("due_date ASC")
   end
 end
