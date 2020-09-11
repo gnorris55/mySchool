@@ -144,10 +144,10 @@ body {
             display: flex;
             flex-direction: column;
             .flex-item { 
-                padding: 5px 5px 0 5px;
-                border: rgb(60, 60, 117) solid .5px;
+                padding: 10px;
+                background-color: rgb(251, 251, 251);
                 margin-bottom: 10px;
-                border-radius: 10px;
+                border-left: grey solid 1px;
                 display: flex;
                 flex-direction: column;
                 header {
@@ -177,10 +177,6 @@ body {
                     font-size: 20px;
                     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
                 }
-                .edit {
-                    float: right;
-                    text-decoration-line: none;
-                }
                 footer {
                     display: flex;
                     flex-direction: row;
@@ -208,6 +204,8 @@ body {
                         flex: 1;
                         text-align: right;
                         a {
+                            text-decoration-line: none;
+                            color: rgb(136, 136, 136);
                             vertical-align: bottom;
                             margin-right: 15px;
                         }
