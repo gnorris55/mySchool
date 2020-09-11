@@ -3,6 +3,10 @@ class HomeworksController < ApplicationController
     def new 
         @homework = Homework.new
         @homework_subject = ["MATH", "CSC", "HSTR", "ART", "ATWP"]
+        respond_to do |t|
+            t.js
+            t.json {render :partial => 'form'}
+        end
     end
 
     def edit 

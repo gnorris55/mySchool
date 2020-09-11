@@ -1,11 +1,13 @@
-<%= form_for @homework do | homework |%>
-    <div class="homework-form">
-        <div class="grid-item"><%= homework.label "SUBJECT:" %></div>
-        <div class="grid-item"><%= homework.select(:subject, @homework_subject)%></div>
-        <div class="grid-item"><%= homework.label "CONTENT:" %></div>
-        <div class="grid-item"><%= homework.text_area :content%></div>
-        <div class="grid-item"><%= homework.label "DUE DATE:"%></div>
-        <div class="grid-item"><%= homework.date_field :due_date%></div>
-        <div class="grid-item button"><%= homework.submit "Add Homework"%></div>
-    </div>
-<% end %>
+<div class="home-fillin">
+    <%= form_for @homework do | homework |%>
+        <div class="homework-form">
+            <div class="grid-item"><%= homework.label "SUBJECT:" %></div>
+            <div class="grid-item"><%= homework.select(:subject, @homework_subject)%></div>
+            <div class="grid-item"><%= homework.label "CONTENT:" %></div>
+            <div class="grid-item"><%= homework.text_area :content%></div>
+            <div class="grid-item"><%= homework.label "DUE DATE:"%></div>
+            <div class="grid-item"><%= homework.date_field :due_date%></div>
+            <div class="grid-item button"><%= homework.submit "Add Homework"%></div>
+        </div>
+    <% end %>
+</div>

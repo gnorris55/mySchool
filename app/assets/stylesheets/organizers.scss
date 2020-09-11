@@ -50,48 +50,94 @@ body {
         }
     }
     .other-stuff {
+        #homework-button {
+            button {
+                border:none;
+                font-size: 12px;
+                border: rgb(60, 60, 117) solid .5px;
+                border-radius: 5px;
+                background-color: rgb(240, 81, 81);
+                border-radius: 5px;
+                width: 200px;
+                padding: 5px;
+                height: 40px;
+                font-weight: 800;
+                text-align:center;
+                transition: all .25s;
+            }
+            button:hover {
+                background-color: rgb(202, 72, 72);
+                width: 220px;
+                height: 50px;
+            }
+        }
+        .unsubmit {
+            border:none;
+            font-size: 12px;
+            border: rgb(60, 60, 117) solid .5px;
+            border-radius: 5px;
+            background-color: rgb(240, 81, 81);
+            border-radius: 5px;
+            width: 200px;
+            padding: 5px;
+            height: 40px;
+            font-weight: 800;
+            text-align:center;
+            transition: all .25s;
+        }
+        .unsubmit:hover {
+            background-color: rgb(202, 72, 72);
+            width: 220px;
+            height: 50px;
+        }
         h3 {
             font-size: 25px;
             text-decoration-line: underline;
         }
-        .homework-form {
-            border-bottom: rgb(131, 169, 212) solid .5px;
-            padding-bottom: 5px;
-            display: grid;
-            grid-template-columns: 100px 600px;
-            .grid-item {
-                padding: 5px;
-                textarea {
-                    outline: none;
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 15px;
-                    font-weight: 700;
-                    border-radius: 10px;
-                    border: none;
-                    background-color: rgb(216, 233, 251);
-                    padding: 10px;
-                    resize: none;
-                    width: 100%;
-                    height: 100px;
+        .home-fillin {
+            border-bottom: rgb(60, 60, 117) solid .5px;
+            .homework-form {
+                padding-bottom: 5px;
+                display: grid;
+                grid-template-columns: 100px 600px;
+                .grid-item {
+                    padding: 5px;
+                    textarea {
+                        border: rgb(60, 60, 117) solid .5px;
+                        outline: none;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 15px;
+                        font-weight: 700;
+                        border-radius: 10px;
+                        background-color: rgb(216, 233, 251);
+                        padding: 10px;
+                        resize: none;
+                        width: 100%;
+                        height: 100px;
+                    }
                 }
-            }
-            .button {
-                margin-top: 10px;
-                input {
-                    border: none;
-                    border-radius: 10px;
-                    background-color: rgb(216, 233, 251);
-                    height: 50px;
-                    width: 125px;
-                    transition: background-color .5s;
-                    font-size: 15px;
+                .button {
+                    margin-top: 10px;
+                    input {
+                        border: rgb(60, 60, 117) solid .5px;
+                        border-radius: 10px;
+                        background-color: rgb(216, 233, 251);
+                        height: 50px;
+                        width: 125px;
+                        transition: background-color .5s;
+                        font-size: 15px;
+                        transition: all .25s;
 
+                    }
+                    input:hover {
+                        height: 60px;
+                        width: 135px;
+                        background-color: rgb(131, 169, 212);
+                    }
                 }
-                input:hover {
-                    background-color: rgb(131, 169, 212);
-                }
-            }
 
+
+            }
         }
 
         .homework {
@@ -99,12 +145,13 @@ body {
             flex-direction: column;
             .flex-item { 
                 padding: 5px 5px 0 5px;
-                border: rgb(131, 169, 212) solid 1px;
+                border: rgb(60, 60, 117) solid .5px;
                 margin-bottom: 10px;
                 border-radius: 10px;
                 display: flex;
                 flex-direction: column;
                 header {
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
                     display: flex;
                     flex-direction: row;
                     font-size: 14px;
@@ -128,6 +175,7 @@ body {
                     width: 95%;
                     padding: 5px;
                     font-size: 20px;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
                 }
                 .edit {
                     float: right;
@@ -148,9 +196,12 @@ body {
                             height: 40px;
                             font-weight: 800;
                             text-align:center;
+                            transition: all .25s;
                         }
                         button:hover {
                             background-color: rgb(202, 72, 72);
+                            height: 45px;
+                            width: 30%;
                         }
                     }
                     .edit {
@@ -173,16 +224,17 @@ body {
     margin-left: auto;
     width: 90%;
     button {
-        border: none;
+        border: rgb(60, 60, 117) solid .5px;
         border-radius: 5px;
         background-color: rgb(216, 233, 251);
         height: 60px;
         font-size: 20px;
         width: 100%;
-        transition: background-color .5s;
+        transition: all .5s;
     }
     button:hover {
         background-color: rgb(131, 169, 212);
+        height: 75px;
     }
 }
 

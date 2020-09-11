@@ -1,0 +1,17 @@
+<div class="flex-item">
+    <header>
+        <div class="item subject"><%= homework.subject %></div>
+        <% if homework.due_date != nil %>  
+            <div class="item date"><%= homework.due_date %></div>
+            <div class="reminder">you have <%= (homework.due_date.yday - Date.today.yday)%> days to complete this task</div>
+        <% else %>
+            <div class="item date"> no time-line</div>
+        <% end %>
+    </header>
+    <div class="item content"><%= homework.content %></div>
+    <footer>
+        <div class="item done"><%= link_to '<button type="button">done</button>'.html_safe, {:controller => 'homeworks',
+                                :action => 'destroy', :id => homework.id }, method: :delete %></div>
+        <div class="item edit"><%= link_to 'edit', edit_homework_path(homework.id)%></div>
+    </footer>
+</div>
