@@ -1,51 +1,53 @@
-<div class="links">
-    <h2>important links</h2>
-    <h3 class="email-titles">emails</h3>
-    <div class="emails">
-        <a class="flex-item" href="https://mail.google.com/mail/u/4/?pli=1#inbox" target="_blank"><button>gnorris@alumni.shawnigan.ca</button></a>
-        <a class="flex-item" href="https://mail.google.com/mail/u/6/#inbox" target="_blank"><button>graemenorris99@gmail.com</button></a>
-        <a class="flex-item" href="https://webmailprod.uvic.ca/?_task=mail&_mbox=INBOX" target="_blank"><button>graemenorris@uvic.ca</button></a>
-    </div>
+<% current_user.email == "graemenorris@uvic.ca"%>
+    <div class="links">
+        <h2>important links</h2>
+        <h3 class="email-titles">emails</h3>
+        <div class="emails">
+            <a class="flex-item" href="https://mail.google.com/mail/u/4/?pli=1#inbox" target="_blank"><button>gnorris@alumni.shawnigan.ca</button></a>
+            <a class="flex-item" href="https://mail.google.com/mail/u/6/#inbox" target="_blank"><button>graemenorris99@gmail.com</button></a>
+            <a class="flex-item" href="https://webmailprod.uvic.ca/?_task=mail&_mbox=INBOX" target="_blank"><button>graemenorris@uvic.ca</button></a>
+        </div>
 
-    <h3>brightspace</h3>
-    <div class="brightspace">
-        <a class="flex-item" href="https://bright.uvic.ca/d2l/home/89516" target="_blank"><button>MATH</button></a>
-        <a class="flex-item" href="https://bright.uvic.ca/d2l/home/72949" target="_blank"><button>CSC</button></a>
-        <a class="flex-item" href="https://bright.uvic.ca/d2l/home/53462" target="_blank"><button>ART</button></a>
-        <a class="flex-item" href="https://bright.uvic.ca/d2l/home/83712" target="_blank"><button>ATWP</button></a>
-        <a class="flex-item" href="https://bright.uvic.ca/d2l/home/54334" target="_blank"><button>HISTORY</button></a>
-    </div>
+        <h3>brightspace</h3>
+        <div class="brightspace">
+            <a class="flex-item" href="https://bright.uvic.ca/d2l/home/89516" target="_blank"><button>MATH</button></a>
+            <a class="flex-item" href="https://bright.uvic.ca/d2l/home/72949" target="_blank"><button>CSC</button></a>
+            <a class="flex-item" href="https://bright.uvic.ca/d2l/home/53462" target="_blank"><button>ART</button></a>
+            <a class="flex-item" href="https://bright.uvic.ca/d2l/home/83712" target="_blank"><button>ATWP</button></a>
+            <a class="flex-item" href="https://bright.uvic.ca/d2l/home/54334" target="_blank"><button>HISTORY</button></a>
+        </div>
 
-    <h3>uvic home</h3>
-    <div class="uvic-home">
-        <a class="flex-item" href="https://www.uvic.ca/" target="_blank"><button>Home</button></a>
+        <h3>uvic home</h3>
+        <div class="uvic-home">
+            <a class="flex-item" href="https://www.uvic.ca/" target="_blank"><button>Home</button></a>
+        </div>
     </div>
-</div>
-<h1>Uvic: mySchool</h1>
-<div class="other-stuff">
-    <h3>add homework</h3>
-    <%= render :partial => 'homeworks/form'%>
-    <div class="homework">
-        <h3>homework</h3>
-        <% @homeworks.each do |homework|%>
-            <div class="flex-item">
-                <header>
-                    <div class="item subject"><%= homework.subject %></div>
-                    <% if homework.content != "" %>  
-                        <div class="item date"><%= homework.due_date %></div>
-                        <div class="reminder">you have <%= (homework.due_date.yday - Date.today.yday)%> days to complete this task</div>
-                    <% else %>
-                    <div class="item date"> no time-line</div>
-                    <% end %>
-                </header>
-                <div class="item content"><%= homework.content %></div>
-                <footer>
-                    <div class="item done"><%= link_to '<button type="button">done</button>'.html_safe, {:controller => 'homeworks',
-                    :action => 'destroy', :id => homework.id }, method: :delete %></div>
-                    <div class="item edit"><%= link_to 'edit', edit_homework_path(homework.id)%></div>
-                </footer>
-            </div>
-        <% end %>
-    </div> 
+    <h1>Uvic: mySchool</h1>
+    <div class="other-stuff">
+        <h3>add homework</h3>
+        <%= render :partial => 'homeworks/form'%>
+        <div class="homework">
+            <h3>homework</h3>
+            <% @homeworks.each do |homework|%>
+                <div class="flex-item">
+                    <header>
+                        <div class="item subject"><%= homework.subject %></div>
+                        <% if homework.content != "" %>  
+                            <div class="item date"><%= homework.due_date %></div>
+                            <div class="reminder">you have <%= (homework.due_date.yday - Date.today.yday)%> days to complete this task</div>
+                        <% else %>
+                        <div class="item date"> no time-line</div>
+                        <% end %>
+                    </header>
+                    <div class="item content"><%= homework.content %></div>
+                    <footer>
+                        <div class="item done"><%= link_to '<button type="button">done</button>'.html_safe, {:controller => 'homeworks',
+                        :action => 'destroy', :id => homework.id }, method: :delete %></div>
+                        <div class="item edit"><%= link_to 'edit', edit_homework_path(homework.id)%></div>
+                    </footer>
+                </div>
+            <% end %>
+        </div> 
+    </div>
 </div>
 
