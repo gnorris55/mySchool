@@ -144,6 +144,7 @@ body {
             display: flex;
             flex-direction: column;
             .flex-item { 
+
                 padding: 10px;
                 background-color: rgb(251, 251, 251);
                 margin-bottom: 10px;
@@ -211,6 +212,9 @@ body {
                         }
                     }
                 }
+            }
+            .flex-item:hover {
+                outline:rgb(131, 169, 212) solid 1px;
             }
         }
     }
