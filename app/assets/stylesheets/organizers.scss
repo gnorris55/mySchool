@@ -3,343 +3,379 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-    background-color: #f4f6ff;
-    .links {
-        background-color: #4f8a8b;
-        margin-right: 10px;
-        float: right;
-        display: inline-block;
-        width: 30%;
-        h2 {
-            color: #f4f6ff;
-            text-align: center;
-            font-size: 30px;
-        }
-        h3 {
-            color: #f4f6ff;
-            text-align: left;
-            font-size: 15px;
-            margin-left: 10px;
-        }
-        .emails {   
-            border-top:  #ea907a solid 1px;
-            padding-top: 10px;
-            @extend .flex-container;
-        }
-        .brightspace {
-            border-top:  #ea907a solid 1px;
-            padding-top: 10px;
-            @extend .flex-container;
-        }
-        .uvic-home {
-            border-top:  #ea907a solid 1px;
-            padding-top: 10px;
-            @extend .flex-container;
-        }
-        .important {
-            border-top:  #ea907a solid 1px;
-            padding-top: 10px;
-            @extend .flex-container;
-        }
+  .links {
+    background-color: #4f8a8b;
+    margin-right: 10px;
+    float: right;
+    display: inline-block;
+    width: 30%;
+    h2 {
+      color: #f4f6ff;
+      text-align: center;
+      font-size: 30px;
     }
-    h1 {
-        display: block;
+    h3 {
+      color: #f4f6ff;
+      text-align: left;
+      font-size: 15px;
+      margin-left: 10px;
+    }
+    .emails {
+      border-top: #ea907a solid 1px;
+      padding-top: 10px;
+      @extend .flex-container;
+    }
+    .brightspace {
+      border-top: #ea907a solid 1px;
+      padding-top: 10px;
+      @extend .flex-container;
+    }
+    .uvic-home {
+      border-top: #ea907a solid 1px;
+      padding-top: 10px;
+      @extend .flex-container;
+    }
+    .important {
+      border-top: #ea907a solid 1px;
+      padding-top: 10px;
+      @extend .flex-container;
+    }
+  }
+  h1 {
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    text-decoration-line: underline;
+  }
+  .other-stuff {
+    background-color: #4f8a8b;
+    width: 65%;
+    padding: 10px;
+    margin-left: 10px;
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      text-decoration-line: underline;
+    }
+  }
+  .other-stuff {
+    #homework-button {
+      button {
+        border: none;
+        font-size: 12px;
+        border-radius: 2px;
+        background-color: #ffcb74;
+        width: 200px;
+        padding: 5px;
+        height: 40px;
+        font-weight: 800;
         text-align: center;
-        font-size: 35px;
-        text-decoration-line: underline;
+        transition: all 0.25s;
+      }
+      button:hover {
+        background-color: #ea907a;
+        width: 220px;
+        height: 50px;
+      }
     }
-    .other-stuff {
-        background-color: #4f8a8b;
-        width: 65%;
-        padding: 10px;
-        margin-left: 10px;
-        h2 {
-            text-align: center;
-            font-size: 30px;
-            text-decoration-line: underline;
+    .unsubmit {
+      border: none;
+      font-size: 12px;
+      background-color: #ffcb74;
+      border-radius: 2px;
+      width: 200px;
+      padding: 5px;
+      height: 40px;
+      font-weight: 800;
+      text-align: center;
+      transition: all 0.25s;
+      margin-bottom: 10px;
+    }
+    .unsubmit:hover {
+      background-color: #ea907a;
+      width: 220px;
+      height: 50px;
+    }
+    h3 {
+      font-size: 25px;
+      text-decoration-line: underline;
+    }
+    .home-fillin {
+      .homework-form {
+        color: white;
+        padding-bottom: 5px;
+        display: grid;
+        grid-template-columns: 100px 600px;
+        .grid-item {
+          width: 100%;
+          padding: 5px;
+          textarea {
+            border: rgb(60, 60, 117) solid 0.5px;
+            outline: none;
+            font-family: "Roboto", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 3px;
+            padding: 10px;
+            resize: none;
+            width: 100%;
+            height: 100px;
+          }
         }
+        .button {
+          margin-top: 10px;
+          input {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+              "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 800;
+            border: none;
+            height: 50px;
+            width: 125px;
+            background-color: #ffcb74;
+            transition: background-color 0.5s;
+            transition: all 0.25s;
+          }
+          input:hover {
+            height: 60px;
+            width: 135px;
+            background-color: #ea907a;
+          }
+        }
+      }
     }
-    .other-stuff {
-        #homework-button {
+
+    .homework {
+      margin-top: 10px;
+      border-top: #ea907a solid 0.5px;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      .flex-item {
+        padding: 10px;
+        background-color: #f4f6ff;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        header {
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+          display: flex;
+          flex-direction: row;
+          font-size: 14px;
+          margin-bottom: 10px;
+          border-bottom: #ea907a solid 1px;
+          padding: 2px;
+          .subject {
+            width: 5%;
+          }
+          .date {
+            width: 25%;
+          }
+          .reminder {
+            width: 70%;
+            text-align: right;
+          }
+        }
+        .content {
+          margin-left: 10px;
+          margin-bottom: 10px;
+          width: 95%;
+          padding: 5px;
+          font-size: 20px;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+        }
+        footer {
+          display: flex;
+          flex-direction: row;
+          .done {
+            flex: 1;
+            margin-bottom: 10px;
             button {
-                border:none;
-                font-size: 12px;
-                border-radius: 2px;
-                background-color: #ffcb74;
-                width: 200px;
-                padding: 5px;
-                height: 40px;
-                font-weight: 800;
-                text-align:center;
-                transition: all .25s;
+              font-size: 12px;
+              background-color: #ffcb74;
+              border-radius: 2px;
+              width: 25%;
+              padding: 5px;
+              height: 40px;
+              font-weight: 800;
+              text-align: center;
+              transition: all 0.25s;
             }
             button:hover {
-                background-color: #ea907a;
-                width: 220px;
-                height: 50px;
+              background-color: #ea907a;
+              height: 45px;
+              width: 30%;
             }
+          }
+          .edit {
+            flex: 1;
+            text-align: right;
+            a {
+              padding-top: 10px;
+              text-decoration-line: none;
+              color: rgb(136, 136, 136);
+              vertical-align: bottom;
+              margin-right: 15px;
+            }
+          }
         }
-        .unsubmit {
-            border:none;
+        .form {
+          padding-top: 5px;
+          border-top: #ffcb74 solid .5px;
+          label {
+            font-weight: 700;
+            font-size: 15px;
+          }
+          input {
             font-size: 12px;
-            background-color: #ffcb74;
-            border-radius: 2px;
+            font-weight: 700px;
             width: 200px;
-            padding: 5px;
-            height: 40px;
-            font-weight: 800;
-            text-align:center;
-            transition: all .25s;
-            margin-bottom: 10px;
+          }
+          .submit {
+              border: none;
+              background-color: #ffcb74;
+              width: 100px;
+              padding: 2px 5px;
+              border-radius: 2px;
+              transition: all .5s;
+          }
+          .submit:hover {
+            background-color:  #ea907a;
+          }
         }
-        .unsubmit:hover {
-            background-color: #ea907a;
-            width: 220px;
-            height: 50px;
+        .get-notes {
+          width: 80px;
+          height: 20px;
+          font-size: 12px;
+          vertical-align: middle;
+          padding: 2px;
         }
-        h3 {
-            font-size: 25px;
-            text-decoration-line: underline;
+        ul {
+          margin-left: 10px;
+          list-style-type: none;
+          .note {
+            list-style-type: square;
+            margin-bottom: 5px;
+          }
         }
-        .home-fillin {
-            .homework-form {
-                color: white;
-                padding-bottom: 5px;
-                display: grid;
-                grid-template-columns: 100px 600px;
-                .grid-item {
-                    width: 100%;
-                    padding: 5px;
-                    textarea {
-                        border: rgb(60, 60, 117) solid .5px;
-                        outline: none;
-                        font-family: 'Roboto', sans-serif;
-                        font-size: 15px;
-                        font-weight: 700;
-                        border-radius: 3px;
-                        padding: 10px;
-                        resize: none;
-                        width: 100%;
-                        height: 100px;
-                    }
-                }
-                .button {
-                    margin-top: 10px;
-                    input {
-                        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-                        border-radius: 3px;
-                        font-size: 12px;
-                        font-weight: 800;
-                        border:none;
-                        height: 50px;
-                        width: 125px;
-                        background-color:  #ffcb74;
-                        transition: background-color .5s;
-                        transition: all .25s;
-
-                    }
-                    input:hover {
-                        height: 60px;
-                        width: 135px;
-                        background-color: #ea907a;
-                    }
-                }
-
-
-            }
-        }
-
-        .homework {
-            margin-top: 10px;
-            border-top: #ea907a solid .5px;
-            padding-top: 20px;
-            display: flex;
-            flex-direction: column;
-            .flex-item { 
-                padding: 10px;
-                background-color: #f4f6ff;
-                margin-bottom: 10px;
-                display: flex;
-                flex-direction: column;
-                header {
-                    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-                    display: flex;
-                    flex-direction: row;
-                    font-size: 14px;
-                    margin-bottom: 10px;
-                    border-bottom: #ea907a solid 1px;
-                    padding: 2px;
-                    .subject {
-                        width: 5%;
-                    }
-                    .date {
-                        width: 25%;
-                    }
-                    .reminder {
-                        width: 70%;
-                        text-align: right;
-                    }
-                }
-                .content {
-                    margin-left: 10px;
-                    margin-bottom: 10px;
-                    width: 95%;
-                    padding: 5px;
-                    font-size: 20px;
-                    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-                }
-                footer {
-                    display: flex;
-                    flex-direction: row;
-                    .done {
-                        flex: 1;
-                        margin-bottom: 10px;
-                        button {
-                            font-size: 12px;
-                            background-color: #ffcb74;
-                            border-radius: 2px;
-                            width: 25%;
-                            padding: 5px;
-                            height: 40px;
-                            font-weight: 800;
-                            text-align:center;
-                            transition: all .25s;
-                        }
-                        button:hover {
-                            background-color: #ea907a;
-                            height: 45px;
-                            width: 30%;
-                        }
-                    }
-                    .edit {
-                        flex: 1;
-                        text-align: right;
-                        a {
-                            padding-top: 10px;
-                            text-decoration-line: none;
-                            color: rgb(136, 136, 136);
-                            vertical-align: bottom;
-                            margin-right: 15px;
-                        }
-                    }
-                }
-            }
-            .flex-item:hover {
-                outline:rgb(131, 169, 212) solid 1px;
-            }
-        }
+      }
+      .flex-item:hover {
+        outline: rgb(131, 169, 212) solid 1px;
+      }
     }
+  }
 }
 
 .flex-item {
-    margin-bottom: 2px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 90%;
-    button {
-        border: rgb(60, 60, 117) solid .5px;
-        border-radius: 2.5px;
-        height: 60px;
-        font-size: 20px;
-        width: 100%;
-        background-color: #f4f6ff;
-        transition: all .5s;
-    }
-    button:hover {
-        background-color: #ea907a;
-        height: 75px;
-    }
+  margin-bottom: 2px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  button {
+    border: rgb(60, 60, 117) solid 0.5px;
+    border-radius: 2.5px;
+    height: 60px;
+    font-size: 20px;
+    width: 100%;
+    background-color: #f4f6ff;
+    transition: all 0.5s;
+  }
+  button:hover {
+    background-color: #ea907a;
+    height: 75px;
+  }
 }
 
 .flex-container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 30px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 30px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
 }
 
 .events {
-    display: grid;
-    grid-template-columns: repeat(4, 24%);
-    .item {
-        margin: 1%;
-        text-align: center;
-        padding: 15px;
-        border: grey solid 1px;
-        height: 80px;
-        .title {
-            margin-bottom: 10px;
-            font-size: 18px;
-            text-decoration-line: underline;
-        }
-        .timing {
-            text-align: left;
-        }
-        transition: all .5s;
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  .item {
+    margin: 1%;
+    text-align: center;
+    padding: 15px;
+    border: grey solid 1px;
+    height: 80px;
+    .title {
+      margin-bottom: 10px;
+      font-size: 18px;
+      text-decoration-line: underline;
     }
-    .item:hover {
-       outline: grey solid 1px;
+    .timing {
+      text-align: left;
     }
+    transition: all 0.5s;
+  }
+  .item:hover {
+    outline: grey solid 1px;
+  }
 }
-
 
 @media screen and (max-width: 1100px) {
-    body {
-        .other-stuff {
-            .home-fillin {
-                .homework-form {
-                    .grid-item {
-                        textarea {
-                            width: 70%;
-                        }
-                    }
-                }
+  body {
+    .other-stuff {
+      .home-fillin {
+        .homework-form {
+          .grid-item {
+            textarea {
+              width: 70%;
             }
+          }
         }
+      }
     }
+  }
 }
-@media screen and (max-width:1250px) {
-    body {
-        .other-stuff {
-            .homework {
-                .flex-item {
-                    header {
-                        .date {
-                           text-align: right;
-                        }
-
-                    }
-                }
+@media screen and (max-width: 1250px) {
+  body {
+    .other-stuff {
+      .homework {
+        .flex-item {
+          header {
+            .date {
+              text-align: right;
             }
+          }
         }
+      }
     }
+  }
 }
-@media screen and (max-width:900px) {
-    body {
-        .other-stuff {
-            .homework {
-                .flex-item {
-                    header {
-                        .date {
-                           display: none;
-                        }
-                        .reminder {
-                            width: 95%;
-                        }
-                    }
-                }
+@media screen and (max-width: 900px) {
+  body {
+    .other-stuff {
+      .homework {
+        .flex-item {
+          header {
+            .date {
+              display: none;
             }
-            .home-fillin {
-                .homework-form {
-                    .grid-item {
-                        textarea {
-                            width: 50%;
-                        }
-                    }
-                }
+            .reminder {
+              width: 95%;
             }
+          }
         }
+      }
+      .home-fillin {
+        .homework-form {
+          .grid-item {
+            textarea {
+              width: 50%;
+            }
+          }
+        }
+      }
     }
+  }
 }

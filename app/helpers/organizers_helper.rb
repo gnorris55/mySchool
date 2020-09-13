@@ -1,2 +1,1 @@
-module OrganizersHelper
-end
+module OrganizersHelper; end

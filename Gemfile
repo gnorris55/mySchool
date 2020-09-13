@@ -41,6 +41,7 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'figaro', '~> 1.2'
 gem 'webpacker', '~> 3.0'
 gem 'jquery-rails', '~> 4.4'
+gem 'prettier'
 gem 'google-api-client', require: 'google/apis/calendar_v3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

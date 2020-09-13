@@ -1,2 +1,1 @@
-module HomeworksHelper
-end
+module HomeworksHelper; end

@@ -1,2 +1,3 @@
-class Homework < ApplicationRecord
+class Homework < ApplicationRecord; 
+    has_many :notes, :dependent => :destroy
 end

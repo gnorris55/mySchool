@@ -15,9 +15,27 @@ done = ->
         $(this).closest("article").hide()
         return
 
+view_notes = -> 
+    button = $('.get-notes').unbind('click')
+    button.click -> 
+        if $(this).html() == "view notes"
+            $(this).next('.note-section').show()
+            $(this).html("hide notes")
+            console.log("show")
+            return
+        else
+            $(this).next('.note-section').hide()
+            $(this).html("view notes")
+            console.log("hide")
+            return
+
+
 
 $(document).ready hide
 $(document).on 'turbolinks:load', hide
 
 $(document).ready done
 $(document).on 'turbolinks:load', done
+
+$(document).ready view_notes
+$(document).on 'turbolinks:load', view_notes

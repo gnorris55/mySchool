@@ -2,8 +2,9 @@ class OrganizersController < ApplicationController
   before_action :authenticate_user!
   def home
     @homework = Homework.new
-    @homework_subject = ["MATH", "CSC", "HSTR", "ART", "ATWP"]
-    @homeworks = Homework.all.order("due_date ASC")
+    @homework_subject = %w[MATH CSC HSTR ART ATWP]
+    @homeworks = Homework.all.order('due_date ASC')
+    @note = Note.new
   end
 
   def calendars
@@ -25,14 +26,12 @@ class OrganizersController < ApplicationController
   def events
     client = Signet::OAuth2::Client.new(client_options)
     client.update!(session[:authorization])
-    
+
     service = Google::Apis::CalendarV3::CalendarService.new
     service.authorization = client
 
     @event_list = service.list_events(params[:calendar_id])
   end
-
-  
 
   def redirect
     client = Signet::OAuth2::Client.new(client_options)
@@ -51,12 +50,12 @@ class OrganizersController < ApplicationController
     redirect_to calendars_url
   end
 
-  private 
+  private
 
   def client_options
     {
-      client_id: ENV["google_client_id"],
-      client_secret: ENV["google_client_secret"],
+      client_id: ENV['google_client_id'],
+      client_secret: ENV['google_client_secret'],
       authorization_uri: 'https://accounts.google.com/o/oauth2/auth',
       token_credential_uri: 'https://accounts.google.com/o/oauth2/token',
       scope: Google::Apis::CalendarV3::AUTH_CALENDAR,
