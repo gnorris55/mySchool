@@ -1,0 +1,8 @@
+<div class="calendar">
+    <h1>calender</h1>
+    <ul>
+    <% @calendar_list.items.each do |calendar| %>
+        <li><%= calendar.summary %> <%= link_to 'events', events_path(calendar.id) %> <%= calendar.id%></li>
+    <% end %>
+    </ul>
+</div>

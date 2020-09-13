@@ -1,25 +1,29 @@
 <% if current_user.email == "graemenorris@uvic.ca" %>
     <div class="links">
-        <h3 class="email-titles">emails</h3>
+        <h3 class="email-titles">Important</h3>
+        <div class="important">
+            <%= link_to "<button type='submit'>Calendar</button>".html_safe, events_path("7os1k9o0fe7rnb85d47dj8jjes@group.calendar.google.com"), :class => "flex-item" %>
+        </div>
+        <h3 class="email-titles">Emails</h3>
         <div class="emails">
             <a class="flex-item" href="https://mail.google.com/mail/u/4/?pli=1#inbox" target="_blank"><button>Shawnigan</button></a>
             <a class="flex-item" href="https://mail.google.com/mail/u/6/#inbox" target="_blank"><button>Gmail</button></a>
             <a class="flex-item" href="https://webmailprod.uvic.ca/?_task=mail&_mbox=INBOX" target="_blank"><button>Uvic</button></a>
         </div>
 
-        <h3>brightspace</h3>
+        <h3>Brightspace</h3>
         <div class="brightspace">
             <a class="flex-item" href="https://bright.uvic.ca/d2l/home/89516" target="_blank"><button>MATH</button></a>
             <a class="flex-item" href="https://bright.uvic.ca/d2l/home/72949" target="_blank"><button>CSC</button></a>
             <a class="flex-item" href="https://bright.uvic.ca/d2l/home/53462" target="_blank"><button>ART</button></a>
             <a class="flex-item" href="https://bright.uvic.ca/d2l/home/83712" target="_blank"><button>ATWP</button></a>
-            <a class="flex-item" href="https://bright.uvic.ca/d2l/home/54334" target="_blank"><button>HISTORY</button></a>
+            <a class="flex-item" href="https://bright.uvic.ca/d2l/home/54334" target="_blank"><button>HSTR</button></a>
         </div>
 
         <h3>Other</h3>
         <div class="uvic-home">
-            <a class="flex-item" href="https://www.uvic.ca/" target="_blank"><button>UVIC HOME</button></a>
-            <a class="flex-item" href="https://support.pearson.com/getsupport/s/guided-assistance?p=recommended-browser-settings/turn-off-pop-up-blockers" target="_blank"><button>PEARSON</button></a>
+            <a class="flex-item" href="https://www.uvic.ca/" target="_blank"><button>Uvic Home</button></a>
+            <a class="flex-item" href="https://support.pearson.com/getsupport/s/guided-assistance?p=recommended-browser-settings/turn-off-pop-up-blockers" target="_blank"><button>Pearson</button></a>
         </div>
     </div>
     <div class="other-stuff">

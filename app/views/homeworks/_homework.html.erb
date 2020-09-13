@@ -3,7 +3,14 @@
         <div class="item subject"><%= homework.subject %></div>
         <% if homework.due_date != nil %>  
             <div class="item date"><%= homework.due_date %></div>
-            <div class="reminder">you have <%= (homework.due_date.yday - Date.today.yday)%> days to complete this task</div>
+            <% @days_to_complete = (homework.due_date.yday - Date.today.yday)%>
+            <% if @days_to_complete == 1%>
+                <div class="reminder">you have <%= @days_to_complete %> day to complete this task</div>
+            <% elsif @days_to_complete > 0 %>
+                <div class="reminder">you have <%= @days_to_complete %> days to complete this task</div>
+            <% else %>
+                <div class="reminder">this assignment is late by <%= -1 * @days_to_complete%> days</div>
+            <% end %>
         <% else %>
             <div class="item date"> no time-line</div>
         <% end %>

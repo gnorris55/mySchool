@@ -1,0 +1,35 @@
+<h2>events</h2>
+<div class="events">
+    <% @event_list.items.each do |event| %>
+            <div class="item">
+                <% if event.present?%>
+                    <div class="title"><%= event.summary %></div>
+                    <% if event.start.present?%>
+                        <div class="timing">
+                            <div class="date">date: <%= event.start.date_time.year %>/<%= event.start.date_time.month %>/<%= event.start.date_time.day %></div>
+                            <div class="time">time: <%= event.start.date_time.hour %>:00-<%= event.end.date_time.hour %>:00</div>
+                        </div>
+                    <% end %>
+                    <% if event.recurrence.present? %>
+                        <div>
+                            <% if event.recurrence[0] == "RRULE:FREQ=WEEKLY;BYDAY=TU" %>
+                                date: tuesday
+                            <% elsif event.recurrence[0] == "RRULE:FREQ=WEEKLY;BYDAY=WE" %>
+                                date: wednesday
+                            <% elsif event.recurrence[0] == "RRULE:FREQ=WEEKLY;BYDAY=TH" %>
+                                date: thursday
+                            <% elsif event.recurrence[0] == "RRULE:FREQ=WEEKLY;BYDAY=FR" %>
+                                date: friday
+                            <% elsif event.recurrence[0] == "RRULE:FREQ=WEEKLY;BYDAY=SA" %>
+                                date: saturday
+                            <% elsif event.recurrence[0] == "RRULE:FREQ=WEEKLY;BYDAY=SU" %>
+                                date: saturday
+                            <% elsif event.recurrence[0] == "RRULE:FREQ=WEEKLY;BYDAY=MO" %>
+                                date: monday
+                            <% end %>
+                        </div>
+                    <% end %>
+                <% end %>
+            </div>
+    <% end %>
+</div>
