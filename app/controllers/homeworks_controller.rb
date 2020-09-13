@@ -33,7 +33,11 @@ class HomeworksController < ApplicationController
     def destroy
         @homework = Homework.find(params[:id])
         @homework.destroy
-        redirect_to root_path
+        respond_to do |t|
+            t.js
+            t.html {redirect_to root_url, notice: "homework is done!"}
+            t.json {render :layout => false}
+        end
     end
 
     private 

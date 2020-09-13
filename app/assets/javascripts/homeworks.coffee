@@ -9,6 +9,15 @@ hide = ->
         $("#homework-button").show()
         return
 
+done = -> 
+    button = $('.finished').unbind('click')
+    button.click -> 
+        $(this).closest("article").hide()
+        return
+
 
 $(document).ready hide
 $(document).on 'turbolinks:load', hide
+
+$(document).ready done
+$(document).on 'turbolinks:load', done
