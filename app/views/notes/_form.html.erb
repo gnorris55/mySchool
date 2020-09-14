@@ -1,6 +1,6 @@
 <%= form_for @note, remote: true do |note| %>
     <div class="form">
-        <%= note.text_field :body, :class => "input" %>
+        <%= note.text_field :body, :class => "input", spellcheck: true, autocomplete: "off" %>
         <%= note.hidden_field :homework_id, :value => (homework.id)%>
         <%= note.submit "add note", :class => "submit" %>
     </div>
