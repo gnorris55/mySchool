@@ -19,6 +19,7 @@
             <div class="item date"> no time-line</div>
         <% end %>
     </header>
+    <div class="item edit"><%= link_to 'edit', edit_homework_path(homework.id)%></div>
     <div class="item content"><%= homework.content %></div>
     <footer>
         <div class="item done"><%= link_to '<button class="finished" type="submit">done</button>'.html_safe, homework, method: :delete, remote: true %></div>
@@ -34,5 +35,4 @@
         </ul>
         <%= render :partial => 'notes/form', locals: {homework: homework}%>
     </div>
-     <div class="item edit"><%= link_to 'edit', edit_homework_path(homework.id)%></div>
 </article>
