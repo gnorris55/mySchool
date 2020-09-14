@@ -6,9 +6,13 @@
             <% @days_to_complete = (homework.due_date.yday - Date.today.yday)%>
             <% if @days_to_complete == 1%>
                 <div class="reminder">you have <%= @days_to_complete %> day to complete this task</div>
+            <% elsif @days_to_complete == 0 %>
+                <div class="reminder">you have the rest of today to complete this task</div>
             <% elsif @days_to_complete > 0 %>
                 <div class="reminder">you have <%= @days_to_complete %> days to complete this task</div>
-            <% else %>
+            <% elsif  @days_to_complete == -1%>
+                <div class="reminder">this assignment is late by <%= -1 * @days_to_complete%> day</div>
+             <% else%>
                 <div class="reminder">this assignment is late by <%= -1 * @days_to_complete%> days</div>
             <% end %>
         <% else %>
