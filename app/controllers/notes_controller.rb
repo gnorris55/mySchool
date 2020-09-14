@@ -15,6 +15,15 @@ class NotesController < ApplicationController
         end
     end
 
+    def edit 
+        @note = Note.find(params[:id])
+    end
+
+    def update 
+        @note = Note.find(params[:id]).update(note_params)
+        redirect_to root_path
+    end
+
     private
     def note_params
         params.require(:note).permit(:body, :homework_id)
