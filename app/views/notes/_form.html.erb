@@ -2,6 +2,6 @@
     <div class="form">
         <%= note.text_field :body, :class => "input" %>
         <%= note.hidden_field :homework_id, :value => (homework.id)%>
-        <%= note.submit "submit", :class => "submit" %>
+        <%= note.submit "add note", :class => "submit" %>
     </div>
 <% end %>
