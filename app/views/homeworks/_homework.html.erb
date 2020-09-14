@@ -15,8 +15,6 @@
              <% else%>
                 <div class="reminder">this assignment is late by <%= -1 * @days_to_complete%> days</div>
             <% end %>
-        <% else %>
-            <div class="item date"> no time-line</div>
         <% end %>
     </header>
     <div class="item edit"><%= link_to 'edit', edit_homework_path(homework.id)%></div>
