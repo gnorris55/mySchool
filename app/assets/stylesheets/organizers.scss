@@ -16,6 +16,7 @@ body {
       padding: 10px 5px;
       text-align: center;
       background-color: #fdfdfd;
+      border-bottom:  #cacaca solid .5px;
     }
     .emails {
       .flex-item {
@@ -222,10 +223,10 @@ body {
           border-bottom: #ea907a solid .5px;
           padding: 2px;
           .subject {
-            width: 10%;
+            width: 6%;
           }
           .date {
-            width: 20%;
+            width: 24%;
           }
           .reminder {
             width: 70%;
