@@ -1,6 +1,5 @@
 <%= form_for @note, remote: true do |note| %>
     <div class="form">
-        <%= note.label :body, "create a note: "%>
         <%= note.text_field :body, :class => "input" %>
         <%= note.hidden_field :homework_id, :value => (homework.id)%>
         <%= note.submit "submit", :class => "submit" %>

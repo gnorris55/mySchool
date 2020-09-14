@@ -18,7 +18,6 @@
     <div class="item content"><%= homework.content %></div>
     <footer>
         <div class="item done"><%= link_to '<button class="finished" type="submit">done</button>'.html_safe, homework, method: :delete, remote: true %></div>
-        <div class="item edit"><%= link_to 'edit', edit_homework_path(homework.id)%></div>
     </footer>
     <button type="submit" class="get-notes">view notes</button>
     <div style="display: none;"class="note-section">
@@ -31,4 +30,5 @@
         </ul>
         <%= render :partial => 'notes/form', locals: {homework: homework}%>
     </div>
+     <div class="item edit"><%= link_to 'edit', edit_homework_path(homework.id)%></div>
 </article>
