@@ -1,9 +1,11 @@
 <% if current_user.email == "graemenorris@uvic.ca" %>
     <div class="links">
-        <div class="email-titles item">Important</div>
-        <div class="important">
-            <%= link_to "<button type='submit'>Calendar</button>".html_safe, events_path("7os1k9o0fe7rnb85d47dj8jjes@group.calendar.google.com"), :class => "flex-item" %>
-        </div>
+        <% if false %>
+            <div class="email-titles item">Important</div>
+            <div class="important">
+                <%= link_to "<button type='submit'>Calendar</button>".html_safe, events_path("7os1k9o0fe7rnb85d47dj8jjes@group.calendar.google.com"), :class => "flex-item" %>
+            </div>
+        <% end %>
         <div class="email-titles item">Emails</div>
         <div class="emails">
             <a class="flex-item" href="https://mail.google.com/mail/u/4/?pli=1#inbox" target="_blank"><button>Shawnigan</button></a>
