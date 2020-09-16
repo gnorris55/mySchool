@@ -1,1 +1,5 @@
-<li class="note"><%= note.body %> (<%= link_to 'edit', edit_note_path(note), class: 'edit-path'%>)</li>
+<% if note.is_checked == nil %>
+    <li class="note"><%= link_to '<button class="check-button check-mark"></button>'.html_safe, {:controller => "notes", :action => "checked_status", :note_id => note.id }, remote: true %><%= note.body %> (<%= link_to 'edit', edit_note_path(note), class: 'edit-path'%>)</li>
+<% else %>
+    <li class="note"><%= link_to '<button class="check-button check-mark-finished"></button>'.html_safe, {:controller => "notes", :action => "checked_status", :note_id => note.id}, remote: true %><%= note.body %> (<%= link_to 'edit', edit_note_path(note), class: 'edit-path'%>)</li>
+<% end %>

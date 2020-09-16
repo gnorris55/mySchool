@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :homeworks
   resources :users
   resources :notes
+  get '/checked_status', to: 'notes#checked_status', as: 'checked_status'
 
   get '/redirect', to: 'organizers#redirect', as: 'redirect'
   get '/callback', to: 'organizers#callback', as: 'callback'

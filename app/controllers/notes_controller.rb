@@ -15,6 +15,18 @@ class NotesController < ApplicationController
         end
     end
 
+    def checked_status
+        @note = Note.find(params[:note_id])
+
+        if @note.is_checked != nil
+            @note.is_checked = nil
+        else
+            @note.is_checked = "true"
+        end
+
+        @note.save
+    end
+
     def edit 
         @note = Note.find(params[:id])
     end
