@@ -14,6 +14,7 @@ class NotesController < ApplicationController
             end
         end
     end
+    
 
     def checked_status
         @note = Note.find(params[:note_id])

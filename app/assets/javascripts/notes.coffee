@@ -13,3 +13,4 @@ check = ->
 
 $(document).ready check
 $(document).on 'turbolinks:load', check
+$(document).on 'click', check

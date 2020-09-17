@@ -29,6 +29,16 @@ view_notes = ->
             console.log("hide")
             return
 
+view_subject = ->
+    button = $('.subject-button').unbind('click')
+    button.click -> 
+        if $(this).attr('class') == "subject-button closed"
+            $(this).parent().next('.subject').show()
+            $(this).addClass("opened").removeClass("closed")
+        else 
+            $(this).parent().next('.subject').hide()
+            $(this).addClass("closed").removeClass("opened")
+
 
 
 $(document).ready hide
@@ -39,3 +49,6 @@ $(document).on 'turbolinks:load', done
 
 $(document).ready view_notes
 $(document).on 'turbolinks:load', view_notes
+
+$(document).ready view_subject
+$(document).on 'turbolinks:load', view_subject

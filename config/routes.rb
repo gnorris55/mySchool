@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users
   resources :notes
   get '/checked_status', to: 'notes#checked_status', as: 'checked_status'
-
+  get '/seperated_page', to: 'homeworks#seperated_page', as: 'seperated_page'
   get '/redirect', to: 'organizers#redirect', as: 'redirect'
   get '/callback', to: 'organizers#callback', as: 'callback'
   get '/calendars', to: 'organizers#calendars', as: 'calendars'

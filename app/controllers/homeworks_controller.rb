@@ -14,6 +14,16 @@ class HomeworksController < ApplicationController
     @homework = Homework.find(params[:id])
   end
 
+  def seperated_page
+    @homeworks = Homework.all
+    @history = Homework.history.order('due_date ASC')
+    @math = Homework.math.order('due_date ASC')
+    @csc = Homework.csc.order('due_date ASC')
+    @art = Homework.art.order('due_date ASC')
+    @atwp = Homework.atwp.order('due_date ASC')
+    @note = Note.new
+  end
+
   def update
     @homework = Homework.find(params[:id])
     if @homework.update(homework_params)

@@ -1,0 +1,35 @@
+<% if current_user.email == "graemenorris@uvic.ca" %>
+    <div class="other-stuff">
+        <div class="homework">
+        <div class="home-link"><%= link_to 'home', root_path%></div>
+            <div class="all-homework">
+                <% if @math.present? %>
+                    <div class="history-button"><button class="subject-button closed">HSTR</button></div>
+                    <div class="subject" style="display:none;"><%= render @history%></div>
+                <% end %>
+
+                <% if @math.present? %>
+                    <div class="math-button"><button class="subject-button closed">math</button></div>
+                    <div class="subject" style="display:none;"><%= render @math%></div>
+                <% end %>
+
+                <% if @csc.present? %>
+                    <div class="math-button"><button class="subject-button closed">CSC</button></div>
+                    <div class="subject" style="display:none;"><%= render @csc%></div>
+                <% end %>
+
+                <% if @art.present? %>
+                    <div class="math-button"><button class="subject-button closed">ART</button></div>
+                    <div class="subject" style="display:none;"><%= render @art%></div>
+                <% end %>
+
+                <% if @atwp.present? %>
+                    <div class="math-button"><button class="subject-button closed">ATWP</button></div>
+                    <div class="subject" style="display:none;"><%= render @atwp%></div>
+                <% end %>
+
+                
+            </div>
+        </div>
+    </div>
+<% end %>
