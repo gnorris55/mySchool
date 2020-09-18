@@ -34,9 +34,10 @@ body {
           height: 40px;
           text-align: left;
           font-size: 13px;
+          transition: all 0s;
         }
         button:hover{
-          background-color: #ea907a;
+          background-color: #f6b8a9;
         }
       }
     }
@@ -56,9 +57,10 @@ body {
           height: 40px;
           text-align: left;
           font-size: 13px;
+          transition: all 0s;
         }
         button:hover{
-          background-color: #ea907a;
+          background-color: #f6b8a9;
         }
       }
     }
@@ -78,9 +80,10 @@ body {
           height: 40px;
           text-align: left;
           font-size: 13px;
+          transition: all 0s;
         }
         button:hover{
-          background-color: #ea907a;
+          background-color: #f6b8a9;
         }
       }
     }
@@ -100,9 +103,10 @@ body {
           height: 40px;
           text-align: left;
           font-size: 13px;
+          transition: all 0s;
         }
         button:hover{
-          background-color: #ea907a;
+          background-color: #f6b8a9;
         }
       }
     }
@@ -206,12 +210,24 @@ body {
       }
     }
 
+    .home-link {
+      a {
+        color: grey;
+        text-decoration-line: none;
+      }
+    }
     .homework {
       margin-top: 10px;
       border-top: #ea907a solid 0.5px;
       padding-top: 20px;
       display: flex;
       flex-direction: column;
+      .all-homework {
+        .subject-button {
+          border: none;
+          padding: 10px;
+        }
+      }
       .flex-item {
         margin-right: auto;
         margin-left: auto;
@@ -328,9 +344,10 @@ body {
               width: 5px;
               height: 10px;
               margin-right: 10px;
+              transition: all 0s;
             }
             .check-button:hover {
-              background-color:  #ea907a;
+              background-color: #ea907a;
             }
             .check-mark-finished {
               margin-top: 5px;
@@ -340,6 +357,7 @@ body {
               width: 5px;
               height: 10px;
               margin-right: 10px;
+              transition: all 0s;
             }
           }
         }

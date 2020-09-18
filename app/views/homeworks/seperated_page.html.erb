@@ -1,7 +1,6 @@
 <% if current_user.email == "graemenorris@uvic.ca" %>
     <div class="other-stuff">
         <div class="homework">
-        <div class="home-link"><%= link_to 'home', root_path%></div>
             <div class="all-homework">
                 <% if @math.present? %>
                     <div class="history-button"><button class="subject-button closed">HSTR</button></div>
@@ -27,9 +26,8 @@
                     <div class="math-button"><button class="subject-button closed">ATWP</button></div>
                     <div class="subject" style="display:none;"><%= render @atwp%></div>
                 <% end %>
-
-                
             </div>
         </div>
+         <div class="home-link"><%= link_to 'home', root_path%></div>
     </div>
 <% end %>
