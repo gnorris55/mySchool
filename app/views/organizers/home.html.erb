@@ -26,6 +26,7 @@
         <div class="uvic-home">
             <a class="flex-item" href="https://www.uvic.ca/" target="_blank"><button>Uvic Home</button></a>
             <a class="flex-item" href="https://support.pearson.com/getsupport/s/guided-assistance?p=recommended-browser-settings/turn-off-pop-up-blockers" target="_blank"><button>Pearson</button></a>
+            <%= link_to '<button type="submit">Subjects</button>'.html_safe, seperated_page_path, class: "flex-item" %>
         </div>
     </div>
     <div class="other-stuff">
@@ -41,7 +42,7 @@
                 <%= render @homeworks %>
             </div>
         </div> 
-        <div class="home-link"><%= link_to 'subjects', seperated_page_path %></div>
+        
     </div>
 <% end %>
 
